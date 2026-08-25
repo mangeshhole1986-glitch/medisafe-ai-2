@@ -1,4 +1,4 @@
-name: Deploy MediSafe to GitHub Pages
+name: Deploy Smart Med to GitHub Pages
 
 on:
   push:
@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Prepare app
+        run: cp smart-med.html index.html
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload site artifact
