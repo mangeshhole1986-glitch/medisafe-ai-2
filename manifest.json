@@ -1,0 +1,11 @@
+{
+  "name": "Smart Med — MediSafe",
+  "short_name": "Smart Med",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f7f6",
+  "theme_color": "#0b6b5e",
+  "description": "Smart medication reminders, adherence, refill monitoring and care-team workflow.",
+  "icons": []
+}
