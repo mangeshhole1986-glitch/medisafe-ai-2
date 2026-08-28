@@ -23,19 +23,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Prepare Smart Med web app
-        run: |
-          cp smart-med.html index.html
-          python - <<'PY'
-          from pathlib import Path
-          p=Path('index.html')
-          s=p.read_text()
-          s=s.replace('</body>', '<script src="enhancements.js"></script></body>')
-          p.write_text(s)
-          PY
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
-      - name: Upload site artifact
+      - name: Upload current web app
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
